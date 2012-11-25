@@ -388,10 +388,6 @@ Plugin.create :sstp do
     UserConfig[:sstp_period] ||= 60
     UserConfig[:sstp_insert_period] ||= 20
 
-    $chitandas.each {|chitanda|
-      chitanda.init_user_config
-    }
-
     # 設定画面
     settings "SSTP" do
       adjustment("ポーリング間隔（秒）", :sstp_period, 1, 6000)
